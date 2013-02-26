@@ -32,5 +32,3 @@ if needs_mongo_gem
   end.run_action(:install)
   Gem.clear_paths
 end
-
-end
