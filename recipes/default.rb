@@ -33,14 +33,4 @@ if needs_mongo_gem
   Gem.clear_paths
 end
 
-if node.recipe?("mongodb::default") or node.recipe?("mongodb")
-  # configure default instance
-  mongodb_instance "mongodb" do
-    mongodb_type "mongod"
-    bind_ip      node['mongodb']['bind_ip']
-    port         node['mongodb']['port']
-    logpath      node['mongodb']['logpath']
-    dbpath       node['mongodb']['dbpath']
-    enable_rest  node['mongodb']['enable_rest']
-  end
 end
